@@ -1,19 +1,20 @@
 @import '../bootstrap/scss/bootstrap.scss';
 
-/* Logo */
+
 .logo {
     width: 50px;
     border-radius: 35px;
 }
 .title-per {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 4rem; /* Tamaño grande */
-    color: #ffffff; /* Color del texto */
+    font-size: 4rem; 
+    color: #ffffff;
     margin-top: 20px;
   }
-/* Fondo y colores generales */
+
 body {
     background-color: #222222;
+    overflow-x: hidden;
 
     .full-height-video {
         height: 80vh;
@@ -29,7 +30,7 @@ body {
     }
 }
 
-/* Enlaces de navegación */
+
 ul li a, li a i {
     color: white;
 }
@@ -46,7 +47,6 @@ ul li a, li a i {
     height: 30px;
 }
 
-/* Contenedores */
 .container {
     min-height: 20vh;
 }
@@ -58,20 +58,20 @@ ul li a, li a i {
 }
 
 .card-img {
-    height: 300px; 
-    object-fit: cover;
+    min-width: 280px;
+    margin: auto;
 }
 
 a {
     text-decoration: none;
 }
 
-/* Footer */
+
 .bgcolor-footer {
     background-color: black;
 }
 
-/* Formularios */
+
 .form-horizontal .form-group {
     margin-bottom: 1.5rem; 
 }
@@ -140,7 +140,7 @@ form {
     margin-top: 2rem;
 }
 
-/* Carrusel */
+
 .carousel .card img {
     height: 100%; 
     width: 100%;
@@ -160,7 +160,7 @@ form {
 }
 
 
-/* Línea decorativa */
+
 .linea {
     margin: 0 20px;
     width: 90px;    
@@ -171,7 +171,7 @@ form {
 }
 .line {
   width: 90%;
-  max-width: 500px; /* Ajustar según sea necesario */
+  max-width: 500px; 
   height: 1px;
   background-color: #fff;
   margin: 1rem auto;
@@ -216,58 +216,58 @@ form {
     border: 2px solid #5a3f1d;
 }
 
-/* Estilo de las secciones cuando hay borde */
+
 .menu-section .category-title {
     border-bottom: 2px solid #5a3f1d;
     padding-bottom: 10px;
 }
 .card-page {
-    background-color: #212529; /* Fondo oscuro */
-    border: none; /* Sin bordes */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background-color: #212529; 
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Imagen de la tarjeta */
+
   .card-img-top {
-    width: 700px; /* Ancho personalizado */
-    height: 400px; /* Altura personalizada */
-    object-fit: cover; /* Mantiene proporción sin distorsión */
+    width: 700px; 
+    height: 400px; 
+    object-fit: cover; 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    margin: 0 auto; /* Centra horizontalmente */
-    display: block; /* Asegura que sea tratada como bloque */
+    margin: 0 auto; 
+    display: block; 
   }
 
-  /* Títulos */
+
   .card-title {
-    font-size: 1.5rem; /* Tamaño de fuente */
-    color: #f8f9fa; /* Color blanco */
+    font-size: 1.5rem; 
+    color: #f8f9fa; 
   }
 
-  /* Texto */
+
   .card-text {
-    color: #adb5bd; /* Gris claro */
+    color: #adb5bd;
     font-size: 1rem;
   }
 
 
-  /* Pestañas */
+ 
   .nav-tabs .nav-link {
-    color: #adb5bd; /* Gris claro */
-    font-size: 1.2rem; /* Tamaño de texto */
-    border: none; /* Sin bordes */
-    margin-right: 10px; /* Espaciado entre pestañas */
+    color: #adb5bd; 
+    font-size: 1.2rem; 
+    border: none; 
+    margin-right: 10px; 
     transition: color 0.3s;
   }
 
   .nav-tabs .nav-link.active {
-    color: #f8f9fa; /* Blanco */
-    background-color: #343a40; /* Fondo oscuro para la activa */
-    border-radius: 5px; /* Bordes redondeados */
+    color: #f8f9fa; 
+    background-color: #343a40; 
+    border-radius: 5px; 
   }
 
   .tab-content {
-    margin-top: 20px; /* Espaciado con respecto a las pestañas */
+    margin-top: 20px; 
   }
   
