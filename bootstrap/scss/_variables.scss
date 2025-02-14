@@ -615,6 +615,14 @@ $font-size-base:              1.2rem !default; // Assumes the browser default, t
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
+@font-face {
+  font-family: 'Rolling';
+  src: url('../recursos/Rolling\ Beat_Personal\ Use.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+}
+
+
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;

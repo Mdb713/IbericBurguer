@@ -16,7 +16,7 @@
 
         <div class="d-flex align-items-center">
           <a href="index_en.html">
-            <img class="logo me-3" src="../../img/$R08XSAD.png" alt="Iberic Burgers Logo">
+            <img class="logo me-3" src="../../img/Logo.svg" alt="Iberic Burgers Logo">
           </a>
           <span class="navbar-text text-white d-none d-lg-inline">
             Tradition, flavor, and quality in every bite.</span>
@@ -54,15 +54,29 @@
               <a class="nav-link text-white" href="contact.html">Contact</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                English <img class="leng-img" src="../../img/icons/en.png" alt="Language English">
+              <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  English
+                  <svg class="leng-svg" width="20" height="15" viewBox="0 0 640 480">
+                      <rect width="640" height="480" fill="#012169"/>
+                      <path stroke="#FFF" stroke-width="60" d="M0,0L640,480M640,0L0,480"/>
+                      <path stroke="#C8102E" stroke-width="40" d="M0,0L640,480M640,0L0,480"/>
+                      <path fill="#FFF" d="M0,180H640V300H0"/>
+                      <path fill="#FFF" d="M220,0V480H420V0"/>
+                      <path fill="#C8102E" d="M240,0V480H400V0"/>
+                      <path fill="#C8102E" d="M0,200H640V280H0"/>
+                  </svg>
               </a>
               <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end text-center">
-                <li class="d-flex justify-content-center">
-                  <a href="../es/index_es.html">Spanish</a> <img class="leng-img" src="../../img/icons/es.png"
-                    alt="Language Spanish">
-                </li>
+                  <li class="d-flex justify-content-center align-items-center">
+                      <a href="../es/index_es.html" class="me-2">Español</a>
+                      <svg class="leng-svg" width="20" height="15" viewBox="0 0 640 480">
+                          <rect width="640" height="480" fill="#AA151B"/>
+                          <rect y="160" width="640" height="160" fill="#F1BF00"/>
+                      </svg>
+                  </li>
+              </ul>
+          </li>
+          
               </ul>
             </li>
           </ul>
@@ -76,21 +90,40 @@
   </header>
 
   <main>
-    <div class="card text-bg-dark">
-      <img src="../../img/mejores-hamburguesas-madrid-nyburger-kvuB--1349x900@MujerHoy.jpg"
-        class="img-fluid port_img full-height-video " alt="Hamburger background image">
-      <div class="card-img-overlay  d-flex flex-column align-items-center justify-content-center">
-        <div class="title-container">
-          <div class="line"></div>
-          <h1 class="title-per">Iberic Burgers</h1>
-          <div class="line"></div>
-        </div>
+    
+    <div class="banner-container position-relative text-center text-white">
+      <div class="card text-bg-dark">
+          <video autoplay loop muted playsinline class="img-fluid port_img full-height-video">
+              <source src="../../recursos/Hamburguesa.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de videos.
+          </video>
+          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
+              <div class="title-container position-relative">
+                  <div class="circle-animation">
+                  </div>
+                  <h1 class="title-per">Iberic Burguers</h1>
+              </div>
+          </div>
       </div>
-    </div>
+  </div>
+
     <section id="about-us" class="container mt-5 mb-5">
       <div class="row d-flex align-items-center">
         <div class="col-12 col-md-4 text-center">
-          <img src="../../img/$R08XSAD.png" class="img-fluid w-75" alt="Iberic Burgers logo">
+          <div class="logo-container">
+            <div class="flip-card">
+              <div class="flip-card-front">
+                <img src="../../img/Logo.svg" class="img-fluid w-75" alt="Logo de Iberic Burgers">
+              </div>
+
+              <div class="flip-card-back">
+                <img src="../../img/Logo trasero.svg" class="img-fluid w-75" alt="Logo de Iberic Burgers trasera">
+              </div>
+              <svg viewBox="0 0 400 400" style="width: 100%; height: auto;">
+                <circle cx="200" cy="200" r="160" fill="#231000" />
+              </svg>
+            </div>
+          </div>
         </div>
         <div class="col-12 col-md-4" data-bs-toggle="tooltip"
           data-bs-title="Tradition, flavor, and quality in every bite.">
@@ -100,7 +133,7 @@
               At <strong>Iberic Burgers</strong>, we combine the gastronomic tradition of Aracena with a modern and
               gourmet approach.
             </p>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#more-info"
+            <button class="animated-button" type="button" data-bs-toggle="collapse" data-bs-target="#more-info"
               aria-expanded="false" aria-controls="more-info">
               Read More
             </button>
@@ -134,7 +167,7 @@
                 <img src="../../img/hamburguesa-iberica-ESSENTIA.jpg" class="card-img-top" alt="Hamburguesa">
                 <div class="card-body">
                   <h3 class="card-title">Burgers</h3>
-                  <a href="hamburguers.html" class="btn btn-primary">See more</a>
+                  <a href="hamburguers.html" class="animated-button">See more</a>
                 </div>
               </div>
             </div>
@@ -143,17 +176,16 @@
                 <img src="../../img/bebidas.jpg" class="card-img-top" alt="Bebidas">
                 <div class="card-body">
                   <h3 class="card-title">Soft Drinks</h3>
-                  <a href="drinks.html" class="btn btn-primary">See more</a>
+                  <a href="drinks.html" class="animated-button">See more</a>
                 </div>
               </div>
             </div>
             <div class="col-12 col-md-4 d-flex">
               <div class="card text-center border-0 mx-auto">
-                <img src="../../img/patatas-bravas-recipe.jpg" class="card-img-top"
-                  alt="Tapas">
+                <img src="../../img/patatas-bravas-recipe.jpg" class="card-img-top" alt="Tapas">
                 <div class="card-body">
                   <h3 class="card-title">Tapas</h3>
-                  <a href="tapes.html" class="btn btn-primary">See more</a>
+                  <a href="tapes.html"class="animated-button">See more</a>
                 </div>
               </div>
             </div>
@@ -167,7 +199,7 @@
                 <img src="../../img/bocadillo-jamon-iberico.jpg" class="card-img-top" alt="Sandwiches">
                 <div class="card-body">
                   <h3 class="card-title">Sandwiches</h3>
-                  <a href="sandwiches.html" class="btn btn-primary">See more</a>
+                  <a href="sandwiches.html" class="animated-button">See more</a>
                 </div>
               </div>
             </div>
@@ -177,7 +209,7 @@
                   class="card-img-top" alt="Desserts">
                 <div class="card-body">
                   <h3 class="card-title">Desserts</h3>
-                  <a href="desserts.html" class="btn btn-primary">See more</a>
+                  <a href="desserts.html" class="animated-button">See more</a>
                 </div>
               </div>
             </div>
@@ -186,7 +218,7 @@
                 <img src="../../img/vino.jpg" class="card-img-top" alt="Wines">
                 <div class="card-body">
                   <h3 class="card-title">Wines</h3>
-                  <a href="drinks.html" class="btn btn-primary">See more</a>
+                  <a href="drinks.html" class="animated-button">See more</a>
                 </div>
               </div>
             </div>
@@ -212,33 +244,22 @@
       <div class="row justify-content-center">
         <div class="col-md-5 mb-4">
           <div class="card border-0 card-interes shadow-lg h-100">
-            <img src="../../img/47B.jpg" class="card-img-top card-img" alt="Castle of Aracena"
-              style="object-fit: cover; height: 350px; width: 100%; max-height: 350px;">
+            <video id="videoPlayer" width="100%" style="max-width: 800px;" controls>
+              <source src="../../recursos/GrutaMaravillas.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
             <div class="card-body">
-              <h3 class="card-title text-center text-light fs-4">Castle of Aracena</h3>
+              <h3 class="card-title text-center text-light fs-4">Gruta de las Maravillas</h3>
               <p class="card-text text-center text-light">
-                A medieval fortification atop a hill, offering spectacular views of the Sierra de Aracena. A trip to the
-                past full of history and unique landscapes.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-5 mb-4">
-          <div class="card border-0 card-interes shadow-lg h-100">
-            <img src="../../img/Visita-Gruta-Maravillas-Aracena-01.jpg" class="card-img-top card-img"
-              alt="Cave of Wonders" style="object-fit: cover; height: 350px; width: 100%; max-height: 350px;">
-            <div class="card-body">
-              <h3 class="card-title text-center text-light fs-4">Cave of Wonders</h3>
-              <p class="card-text text-center text-light">
-                An impressive natural cave in Aracena with stalactites, stalagmites, and inner lakes. A unique
-                destination for nature and geology enthusiasts.
+                An impressive natural cave in Aracena featuring stalactites, stalagmites, and underground lakes.
+                A unique destination for nature and geology lovers.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <footer class="text-white py-4 bgcolor-footer">
       <div class="container">
         <div class="row">

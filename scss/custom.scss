@@ -6,7 +6,7 @@
     border-radius: 35px;
 }
 .title-per {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Rolling',Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 4rem; 
     color: #ffffff;
     margin-top: 20px;
@@ -158,6 +158,18 @@ form {
     display: flex;
     flex-direction: column;
 }
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 5%; 
+}
+
+.carousel-control-prev {
+    left: -1%; 
+}
+
+.carousel-control-next {
+    right: -1; 
+}
 
 
 
@@ -209,17 +221,58 @@ form {
   }
 
 .menu-section {
-    background-color: #333333;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    padding: 15px;
-    border: 2px solid #5a3f1d;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  transition: all 0.3s ease-in-out;
 }
 
 
 .menu-section .category-title {
     border-bottom: 2px solid #5a3f1d;
     padding-bottom: 10px;
+}
+
+
+.menu-section:hover {
+  box-shadow: 0 8px 16px rgba(185, 175, 175, 0.2);
+  transform: scale(1.02);
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.category-title::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #ffcc00;
+  display: block;
+  margin: 5px auto;
+  border-radius: 2px;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .card-page {
     background-color: #212529; 
@@ -270,4 +323,232 @@ form {
   .tab-content {
     margin-top: 20px; 
   }
+  .logo-container {
+    position: relative;
+    width: 75%;
+    height: auto;
+    perspective: 1000px;
+    margin: auto;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+
+  .logo-container:hover .flip-card {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flip-card-front img,
+  .flip-card-back img {
+    width: 75%;
+    height: auto;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+.animated-button {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: #ffffffd5;
+    box-shadow: 0 0 0 2px #ffffff20;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .animated-button span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #cf9832d0;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .animated-button span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 5px #f39f21af;
+    color: #ffffff;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+  }
+  
+  .animated-button:hover span:last-child {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+  }
+  .tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+  
+  .tag-list li {
+    background-color: transparent;
+    padding: 1rem;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .scroller {
+    background-color: #111314;
+    max-width: 3000px;
+  }
+  
+  .scroller__inner {
+    padding-block: 0.5rem;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffcc00;
+    text-shadow:2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  .scroller__inner li {
+    font-size: 2rem;
+    padding: 10px 20px ;
+    display: inline-block;
+}
+  .scroller[data-animated=true] {
+    overflow: hidden;
+  }
+  
+  .scroller[data-animated=true] .scroller__inner {
+    width: fit-content;
+    flex-wrap: nowrap;
+    animation: scroll 10s linear infinite;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-20%));
+    }
+  }
+  .title-per {
+    --offset: 10px;
+    --border-size: 2px;
+    
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-weight: bold;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+    transition: background .8s ease;
+    font-size: 4rem; /* Tamaño inicial del título */
+  }
+  
+  .title-per:hover {
+    background: rgba(100, 0, 0, .03);
+  }
+  
+  .title-per::before,
+  .title-per::after {
+    content: '';
+    position: absolute;
+    transition: transform .8s ease;
+    will-change: transform;
+    border: inherit;
+  }
+  
+  .title-per::before {
+    top: calc(var(--offset) * -1);
+    bottom: calc(var(--offset) * -1);
+    left: 0;
+    right: 0;
+    border-top: var(--border-size) solid currentcolor;
+    border-bottom: var(--border-size) solid currentcolor;
+  }
+  
+  .title-per::after {
+    left: calc(var(--offset) * -1);
+    right: calc(var(--offset) * -1);
+    top: 0;
+    bottom: 0;
+    border-left: var(--border-size) solid currentcolor;
+    border-right: var(--border-size) solid currentcolor;
+  }
+  
+  .title-per:hover::before {
+    transform: scaleX(0);
+  }
+  
+  .title-per:hover::after {
+    transform: scaleY(0);
+  }
+  
+  /* Media Queries para Responsividad */
+  
+  /* En pantallas pequeñas (por ejemplo, móviles) */
+  @media (max-width: 768px) {
+    .title-per {
+      font-size: 2rem; /* Reducir el tamaño de la fuente para móviles */
+      padding: 0.4em 0.8em; /* Reducir padding */
+      letter-spacing: .1em; /* Reducir el espaciado entre letras */
+      width: auto; /* Ajustar el ancho para evitar que la caja sea demasiado grande */
+      text-align: center; /* Centrar el texto */
+    }
+  
+    .title-per::before {
+      top: calc(var(--offset) * -0.5);
+      bottom: calc(var(--offset) * -0.5);
+    }
+  
+    .title-per::after {
+      left: calc(var(--offset) * -0.5);
+      right: calc(var(--offset) * -0.5);
+    }
+  }
+  
+  /* En pantallas medianas (por ejemplo, tabletas) */
+  @media (max-width: 1024px) {
+    .title-per {
+      font-size: 2rem; /* Ajustar el tamaño del texto para tabletas */
+      padding: 0.5em 1em; /* Ajustar padding */
+      letter-spacing: .2em; /* Ajustar el espaciado entre letras */
+      width: auto; /* Evitar que el título ocupe todo el ancho */
+      text-align: center; /* Centrar el texto */
+    }
+  }
+  
+  
+  
   
